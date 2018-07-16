@@ -1,0 +1,38 @@
+[i for i in range(1, 6)]
+Output:  [1, 2, 3, 4, 5]
+
+###
+result_list = []
+
+for i in range(1, 6):
+    result_list.append(i)
+
+result_list
+###
+
+###
+x = ['a', 'b', 'c', 'd', '_e', '_f']
+[i for i in x if not i.startswith('_')]
+
+Output:  ['a', 'b', 'c', 'd']
+###
+
+### Slightly different syntax from above
+[i if not i.startswith('_') else 'skipped' for i in x]
+###
+
+###
+matrix = [
+    [1, 2, 3, 4],
+    [5, 6, 7, 8],
+    [9, 10, 11, 12],
+]
+
+# Write from the outside in.
+[element for row in matrix for element in row]
+
+Output:  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+###
+
+
+
